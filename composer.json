@@ -1,0 +1,21 @@
+{
+  "name": "koen/academy-blog-frontend",
+  "version": "0.0.1",
+  "description": "N/A",
+  "type": "magento2-module",
+  "require": {
+    "magento/framework": "*",
+    "koen/academy-blog-core": "0.0.*"
+  },
+  "license": [
+    "Proprietary"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Koen\\AcademyBlogFrontend\\": ""
+    }
+  }
+}
