@@ -2,7 +2,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
     <body>
-        <block template="Koen_AcademyBlogFrontend::quick_posts.phtml">
+        <block ifconfig="academy_blog/general/enabled" template="Koen_AcademyBlogFrontend::quick_posts.phtml">
             <arguments>
                 <argument name="max_posts" xsi:type="number">3</argument>
 

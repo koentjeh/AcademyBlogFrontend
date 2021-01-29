@@ -36,18 +36,21 @@ class LatestPosts implements ArgumentInterface
     }
 
     /**
+     * @param int $limit
      * @param int $page
      * @return PostInterface[]
      */
-    public function getPosts(int $page = 1): array
+    public function getPosts(int $limit = 4, int $page = 1): array
     {
-        $limit = $this->config->getPostLimit();
+//        $limit = $this->config->getPostLimit();
 
         $searchCriteria = $this->searchCriteriaBuilder
             ->setPageSize($limit)
             ->setCurrentPage($page)
             ->create();
 
-        return $this->postCollectionRepository->getList($searchCriteria);
+        $posts = $this->postCollectionRepository->getList($searchCriteria);
+
+        return $posts->getItems();
     }
 }
