@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block template="Koen_AcademyBlogFrontend::post.phtml">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">Koen\AcademyBlogFrontend\ViewModel\Post</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

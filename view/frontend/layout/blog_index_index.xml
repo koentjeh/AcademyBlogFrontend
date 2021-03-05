@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd"
+      layout="2columns-right">
+    <body>
+        <referenceContainer name="content">
+            <block template="Koen_AcademyBlogFrontend::list.phtml">
+                <arguments>
+                    <argument name="max_posts" xsi:type="number">5</argument>
+                    <argument name="view_model" xsi:type="object">Koen\AcademyBlogFrontend\ViewModel\PostList</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

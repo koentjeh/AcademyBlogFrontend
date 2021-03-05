@@ -1,0 +1,14 @@
+<h1>Hi i am a single post</h1>
+
+<?php
+
+use Koen\AcademyBlogFrontend\ViewModel\Post;
+
+/** @var Post $viewModel */
+$viewModel = $block->getViewModel();
+$post = $viewModel->getPost();
+?>
+
+
+<h3><?= $post->getTitle() ?></h3>
+<p><?= $post->getBody() ?></p>

@@ -1,14 +1,14 @@
-<?php declare(strict_types=1);
+<?php
 
-namespace Koen\AcademyBlogFrontend\Controller\Index;
+namespace Koen\AcademyBlogFrontend\Controller\Post;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\HttpGetActionInterface;
+use Magento\Framework\Controller\ResultInterface;
 use Magento\Framework\View\Result\PageFactory;
 
-class Index extends Action implements HttpGetActionInterface
+class View extends Action implements HttpGetActionInterface
 {
-    /** @var PageFactory */
     private $pageFactory;
 
     public function __construct(
@@ -19,7 +19,7 @@ class Index extends Action implements HttpGetActionInterface
         $this->pageFactory = $pageFactory;
     }
 
-    public function execute()
+    public function execute(): ResultInterface
     {
         return $this->pageFactory->create();
     }

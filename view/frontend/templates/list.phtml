@@ -1,0 +1,17 @@
+<?php
+use Koen\AcademyBlogFrontend\ViewModel\PostList;
+
+/** @var PostList $viewModel */
+$viewModel = $block->getViewModel();
+?>
+
+<hi>All Posts</hi>
+<ul>
+<?php foreach ($viewModel->getPosts(5) as $post): ?>
+    <li>
+        <h3><?= $post->getTitle() ?></h3>
+        <p><?= $post->getBody() ?></p>
+        <a href="<?= $post->getViewUrl(true) ?>">Read more</a>
+    </li>
+<?php endforeach ?>
+</ul>
